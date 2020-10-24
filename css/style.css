@@ -380,20 +380,20 @@ textarea {
 
 @font-face {
     font-family: '2MASS J1808';
-    src: url('/fonts/2MASSJ1808-Normal.eot') format('eot'),
-         url('/fonts/2MASSJ1808-Normal.ttf') format('ttf'),
-         url('/fonts/2MASSJ1808-Normal.woff') format('woff'),
-         url('/fonts/2MASSJ1808-Normal.woff2') format('woff2');
+    src: url('./fonts/2MASSJ1808-Normal.eot') format('eot'),
+         url('./fonts/2MASSJ1808-Normal.ttf') format('ttf'),
+         url('./fonts/2MASSJ1808-Normal.woff') format('woff'),
+         url('./fonts/2MASSJ1808-Normal.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: '2MASS J1808';
-    src: url('/fonts/2MASSJ1808-Heavy.eot') format('eot'),
-         url('/fonts/2MASSJ1808-Heavy.ttf') format('ttf'),
-         url('/fonts/2MASSJ1808-Heavy.woff') format('woff'),
-         url('/fonts/2MASSJ1808-Heavy.woff2') format('woff2');
+    src: url('./fonts/2MASSJ1808-Heavy.eot') format('eot'),
+         url('./fonts/2MASSJ1808-Heavy.ttf') format('ttf'),
+         url('./fonts/2MASSJ1808-Heavy.woff') format('woff'),
+         url('./fonts/2MASSJ1808-Heavy.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
 }
@@ -424,9 +424,7 @@ body {
 	margin: 0 auto;
 }
 
-/* 
-    header styles: logo, navigation, socials
-*/
+/* header styles start */
 
 .header {
     position: fixed;
@@ -547,12 +545,15 @@ body {
 .header__socials li:hover {
     border-color: #4000AF;
     background-color: #f8f4ff;
+}
+
+.header__socials li a:hover {
     cursor: pointer;
 }
 
-/* 
-    main content styles: eigth blocks
-*/
+/* header styles end */
+
+/* main content styles start */
 
 .main {
     max-width: 1830px;
@@ -617,9 +618,9 @@ h2 {
     cursor: pointer;
 }
 
-/* 
-    block__top styles: text block, button, image
-*/
+/* main content styles end */
+
+/* block__top styles start */
 
 .top__block {
     max-width: 1630px;
@@ -652,9 +653,9 @@ h2 {
     max-width: 500px;
 }
 
-/* 
-    quote__block styles: text blocks
-*/
+/* block__top styles end */
+
+/* quote__block styles start */
 
 .quote__block {
     display: -webkit-box;
@@ -691,9 +692,9 @@ h2 {
     padding-top: 65px;
 }
 
-/* 
-    philosophy__block styles: heading, tabs, image, text blocks
-*/
+/* quote__block styles end */
+
+/* philosophy__block styles start */
 
 .philosophy__block {
     max-width: 1585px;
@@ -796,9 +797,9 @@ h2 {
     color: #4000AF;
 }
 
-/*
-    usability__block styles: five cards - images, text blocks, buttons
-*/
+/* philosophy__block styles end */
+
+/* usability__block styles start */
 
 .usability__block {
     padding: 120px 0 90px;
@@ -927,9 +928,9 @@ h2 {
     padding: 25px 0 60px;
 }
 
-/*
-    facilities__block styles: heading, tabs, text blocks, slider
-*/
+/* usability__block styles end */
+
+/* facilities__block styles start */
 
 .facilities__block {
     max-width: 1585px;
@@ -1027,9 +1028,9 @@ p.subheader {
     margin-left: 20px;
 }
 
-/*
-    services__block styles: heading, three cards with text blocks
-*/
+/* facilities__block styles end */
+
+/* services__block styles start */
 
 .services__block {
     max-width: 1700px;
@@ -1085,9 +1086,9 @@ p.subheader {
     padding-top: 45px;
 }
 
-/*
-    costs__block styles: heading, two cards width text blocks
-*/
+/* services__block styles end */
+
+/* costs__block styles start */
 
 .costs__block {
     max-width: 1050px;
@@ -1231,9 +1232,9 @@ p.costs__note {
     padding-top: 55px;
 }
 
-/*
-    invitation__block styles: heading, image, form
-*/
+/* costs__block styles end */
+
+/* invitation__block styles start */
 
 .invitation__block {
     max-width: 1430px;
@@ -1258,9 +1259,9 @@ p.costs__note {
         flex-wrap: nowrap;
 }
 
-/*
-    footer styles: logo, navigation, copyright, socials
-*/
+/* invitation__block styles end */
+
+/* footer styles start */
 
 .footer {
     background: -o-linear-gradient(6.47deg, #4000AF 0.8%, #5F02FF 100%);
@@ -1348,6 +1349,8 @@ p.costs__note {
             box-sizing: border-box;
     border-radius: 5px;
 }
+
+/* footer styles start */
 
 .hidden {
     display: none;

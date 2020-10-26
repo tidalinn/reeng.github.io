@@ -1642,6 +1642,39 @@ p.costs__note {
 
 /* footer styles end */
 
+/* policy page styles start */
+
+.policy__content {
+    max-width: 1630px;
+    margin: auto;
+    padding: 305px 0 200px;
+}
+
+.policy__content h1 {
+    max-width: 950px;
+}
+
+.policy__text {
+    font-family: Cera Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 50px;
+    /* or 200% */
+    color: #2B2B2B;
+    padding-top: 60px;
+}
+
+.policy__text span {
+    font-weight: bold;
+}
+
+.policy__text p {
+    padding: 30px 0 70px;
+}
+
+/* policy page styles end */
+
 .hidden {
     display: none;
 }

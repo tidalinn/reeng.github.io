@@ -86,37 +86,35 @@
         <div class="block philosophy__block">
           <h2>Философия проекта</h2>
           <ul class="philosophy__tabs menu__list">
-            <li class="block__item">
-              <a href="#">Организациям</a>
-            </li>
-            <li class="block__item active">
-              <a href="#">Частным лицам</a>
-            </li>
+            <li class="block__item active" data-block="tab-1">Организациям</li>
+            <li class="block__item" data-block="tab-2">Частным лицам</li>
           </ul>
 
-          <!-- Организациям -->
-          <div class="philosophy__details philosophy__companies">
-            <!-- <img class="philosophy__image" src="./img/default-image.jpg" alt="companies-video"> -->
-            <div class="philosophy__video">
-              <div class="video__wrapper">
-                <div class="video__item"></div>
-                <iframe class="video__element" src="https://www.youtube.com/embed/2ePf9rue1Ao" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-               </div>
+          <div class="philosophy__content">
+            <!-- Организациям -->
+            <div class="philosophy__details tab-1 active">
+              <!-- <img class="philosophy__image" src="./img/default-image.jpg" alt="companies-video"> -->
+              <div class="philosophy__video">
+                <div class="video__wrapper">
+                  <div class="video__item"></div>
+                  <iframe class="video__element" src="https://www.youtube.com/embed/2ePf9rue1Ao" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="philosophy__content">
+                <h3 class="philosophy__title">Для компаний</h3>
+                <p class="philosophy__description">Каждое отдельное предприятие не является идеальным с точки зрения внутренних и внешних процессов и взаимодействий при эксплуатации объекта. Но в результате самоорганизации можно так объединить усилия этих предприятий, что результат объединения станет идеальным.</p>
+                <p class="philosophy__info">Мы предлагаем инструмент для такой самоорганизации: Единую Информационную Платформу «REENG».</p>
+              </div>
             </div>
-            <div class="philosophy__content">
-              <h3 class="philosophy__title">Для компаний</h3>
-              <p class="philosophy__description">Каждое отдельное предприятие не является идеальным с точки зрения внутренних и внешних процессов и взаимодействий при эксплуатации объекта. Но в результате самоорганизации можно так объединить усилия этих предприятий, что результат объединения станет идеальным.</p>
-              <p class="philosophy__info">Мы предлагаем инструмент для такой самоорганизации: Единую Информационную Платформу «REENG».</p>
-            </div>
-          </div>
 
-          <!-- Частными лицам -->
-          <div class="philosophy__details philosophy__private hidden">
-            <img class="philosophy__image" src="./img/logo-reeng-min.png" alt="private-image">
-            <div class="philosophy__content">
-              <h3 class="philosophy__title">Для частных лиц</h3>
-              <p class="philosophy__description">В мире вообще, в интернете,  где-то у нас дома или на даче… точно есть вся информация, которая может нам понадобиться. Об  оборудовании дома, технике, растениях и животных: о чем беспокоимся и что стараемся  содержать в порядке! Но… как же тяжело найти нужную в нужный момент! “...И ведь уже находил! А вот куда положил?!...” И так - каждый раз!</p>
-              <p class="philosophy__info">Единая Информационная Платформа «REENG»: Всё, что нужно - всегда под рукой!</p>
+            <!-- Частными лицам -->
+            <div class="philosophy__details tab-2">
+              <img class="philosophy__image" src="./img/logo-reeng-min.png" alt="private-image">
+              <div class="philosophy__content">
+                <h3 class="philosophy__title">Для частных лиц</h3>
+                <p class="philosophy__description">В мире вообще, в интернете,  где-то у нас дома или на даче… точно есть вся информация, которая может нам понадобиться. Об  оборудовании дома, технике, растениях и животных: о чем беспокоимся и что стараемся  содержать в порядке! Но… как же тяжело найти нужную в нужный момент! “...И ведь уже находил! А вот куда положил?!...” И так - каждый раз!</p>
+                <p class="philosophy__info">Единая Информационная Платформа «REENG»: Всё, что нужно - всегда под рукой!</p>
+              </div>
             </div>
           </div>
         </div>
@@ -175,119 +173,110 @@
           <h2>Возможности платформы</h2>
           <p class="subheader">Примеры основных сервисов Платформы</p>
           <ul class="facilities__tabs menu__list">
-            <li class="block__item active">
-              <a href="#">Личный кабинет</a>
-            </li>
-            <li class="block__item">
-              <a href="#">Моё оборудование</a>
-            </li>
-            <li class="block__item">
-              <a href="#">Планировщик задач</a>
-            </li>
-            <li class="block__item">
-              <a href="#">Неисправности</a>
-            </li>
-            <li class="block__item">
-              <a href="#">Сервис и ремонт</a>
-            </li>
-            <li class="block__item">
-              <a href="#">Коммуникатор</a>
-            </li>
+            <li class="block__item active" data-block="tab-1">Личный кабинет</li>
+            <li class="block__item" data-block="tab-2">Моё оборудование</li>
+            <li class="block__item" data-block="tab-3">Планировщик задач</li>
+            <li class="block__item" data-block="tab-4">Неисправности</li>
+            <li class="block__item" data-block="tab-5">Сервис и ремонт</li>
+            <li class="block__item" data-block="tab-6">Коммуникатор</li>
           </ul>
-
-          <!-- Личный кабинет -->
-          <div class="facilities__details facilities__profile">
-            <div class="facilities__content">
-              <h3 class="facilities__title">Личный кабинет</h3>
-              <p>Настраиваемое информационное поле для просмотра необходимой текущей или статистической информации по состоянию оборудования (в т.ч. данные IoT), положению дел с обслуживанием, ремонтами, иными задачами; напоминания о необходимых действиях; взаимодействию с поставщиками и подрядчиками.</p>
-              <p>Информация в личных кабинетах каждой группы пользователей отличается в соответствии с выполняемыми функциями, требуемой статистической информацией, различиями в наборе текущих задач.</p>
-            </div>
-            <div class="facilities__slider">
-              <img class="facilities__image" src="./img/dashboard-image-profile-min.png" alt="facilities-profile">
-              <div class="facilities__navigation">
-                <img class="arrow arrow__left" src="./img/svg/arrow-left.svg" alt="arrow-left">
-                <img class="arrow arrow__right" src="./img/svg/arrow-right.svg" alt="arrow-right">
+          
+          <div class="facilies__content">
+            <!-- Личный кабинет -->
+            <div class="facilities__details tab-1 active">
+              <div class="facilities__content">
+                <h3 class="facilities__title">Личный кабинет</h3>
+                <p>Настраиваемое информационное поле для просмотра необходимой текущей или статистической информации по состоянию оборудования (в т.ч. данные IoT), положению дел с обслуживанием, ремонтами, иными задачами; напоминания о необходимых действиях; взаимодействию с поставщиками и подрядчиками.</p>
+                <p>Информация в личных кабинетах каждой группы пользователей отличается в соответствии с выполняемыми функциями, требуемой статистической информацией, различиями в наборе текущих задач.</p>
+              </div>
+              <div class="facilities__slider">
+                <img class="facilities__image" src="./img/dashboard-image-profile-min.png" alt="facilities-profile">
+                <div class="facilities__navigation">
+                  <img class="arrow arrow__left" src="./img/svg/arrow-left.svg" alt="arrow-left">
+                  <img class="arrow arrow__right" src="./img/svg/arrow-right.svg" alt="arrow-right">
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Моё оборудование -->
-          <div class="facilities__details facilities__equipment hidden">
-            <div class="facilities__content">
-              <h3 class="facilities__title">Мое оборудование</h3>
-              <p>Сервис, предоставляющий все инструменты для учёта и обслуживания как  различного оборудования, так и многих других активов личного хозяйства: планирования, и контроля любых необходимых работ, в т.ч.  по техническому обслуживанию и ремонту; хранения и оперативного использования документации; организации работы по устранению неисправностей (рекламации и заявки) и многому другому.</p>
+            <!-- Моё оборудование -->
+            <div class="facilities__details tab-2">
+              <div class="facilities__content">
+                <h3 class="facilities__title">Мое оборудование</h3>
+                <p>Сервис, предоставляющий все инструменты для учёта и обслуживания как  различного оборудования, так и многих других активов личного хозяйства: планирования, и контроля любых необходимых работ, в т.ч.  по техническому обслуживанию и ремонту; хранения и оперативного использования документации; организации работы по устранению неисправностей (рекламации и заявки) и многому другому.</p>
+              </div>
+              <img class="facilities__image" src="./img/dashboard-image-equipment-min.png" alt="facilities-equipment">
             </div>
-            <img class="facilities__image" src="./img/dashboard-image-equipment-min.png" alt="facilities-equipment">
-          </div>
 
-          <!-- Планировщик задач -->
-          <div class="facilities__details facilities__planner hidden">
-            <div class="facilities__content">
-              <h3 class="facilities__title">Планироващик задач</h3>
-              <p>Предназначен для планирования (в том числе совместно с другими участниками процесса), контроля и анализа исполнения любых задач, которые могут возникнуть в процессе эксплуатации: технического обслуживания, ремонта, прочих. Предоставляет возможность текущих комментариев участников по ходу выполнения работ.</p>
+            <!-- Планировщик задач -->
+            <div class="facilities__details tab-3">
+              <div class="facilities__content">
+                <h3 class="facilities__title">Планироващик задач</h3>
+                <p>Предназначен для планирования (в том числе совместно с другими участниками процесса), контроля и анализа исполнения любых задач, которые могут возникнуть в процессе эксплуатации: технического обслуживания, ремонта, прочих. Предоставляет возможность текущих комментариев участников по ходу выполнения работ.</p>
+              </div>
+              <img class="facilities__image" src="./img/dashboard-image-planner-min.png" alt="facilities-planner">
             </div>
-            <img class="facilities__image" src="./img/dashboard-image-planner-min.png" alt="facilities-planner">
-          </div>
 
-          <!-- Неисправности -->
-          <div class="facilities__details facilities__errors hidden">
-            <div class="facilities__content">
-              <h3 class="facilities__title">Неисправности</h3>
-              <p class="facilities__name">Собственнику оборудования:</p>
-              <p>В случае возникновения неисправности оборудования предоставляют возможность создать заявку и/или рекламацию, отправить её сервисному партнёру и/или производителю, приложив необходимую информацию, отслеживать изменение статуса выполнения.</p>
-              <p class="facilities__name">Сервисной компании:</p>
-              <p>Принять заявку от Заказчика, переадресовать её конкретному исполнителю, отследить статус её выполнения.</p>
-              <p>Собирать и анализировать статистику по выполняемым работам, по неисправностям, по исполнителям. Планировать загрузку сотрудников.</p>
+            <!-- Неисправности -->
+            <div class="facilities__details tab-4 facilities__errors">
+              <div class="facilities__content">
+                <h3 class="facilities__title">Неисправности</h3>
+                <p class="facilities__name">Собственнику оборудования:</p>
+                <p>В случае возникновения неисправности оборудования предоставляют возможность создать заявку и/или рекламацию, отправить её сервисному партнёру и/или производителю, приложив необходимую информацию, отслеживать изменение статуса выполнения.</p>
+                <p class="facilities__name">Сервисной компании:</p>
+                <p>Принять заявку от Заказчика, переадресовать её конкретному исполнителю, отследить статус её выполнения.</p>
+                <p>Собирать и анализировать статистику по выполняемым работам, по неисправностям, по исполнителям. Планировать загрузку сотрудников.</p>
+              </div>
+              <img class="facilities__image" src="./img/dashboard-image-errors-min.png" alt="facilities-errors">
             </div>
-            <img class="facilities__image" src="./img/dashboard-image-errors-min.png" alt="facilities-errors">
-          </div>
 
-          <!-- Сервис и ремонт -->
-          <div class="facilities__details facilities__partners hidden">
-            <div class="facilities__contentblock__facilities--info">
-              <h3 class="facilities__title">Партнёры</h3>
-              <p>Сервис, обеспечивающий возможность быстрого поиска и проверки потенциального подрядчика для решения поставленной  задачи, а также организации быстрой связи с ним.</p>
+            <!-- Сервис и ремонт -->
+            <div class="facilities__details tab-5">
+              <div class="facilities__contentblock__facilities--info">
+                <h3 class="facilities__title">Партнёры</h3>
+                <p>Сервис, обеспечивающий возможность быстрого поиска и проверки потенциального подрядчика для решения поставленной  задачи, а также организации быстрой связи с ним.</p>
+              </div>
+              <img class="facilities__image" src="./img/dashboard-image-partners-min.png" alt="facilities-partners">
             </div>
-            <img class="facilities__image" src="./img/dashboard-image-partners-min.png" alt="facilities-partners">
-          </div>
 
-          <!-- Коммутатор -->
-          <div class="facilities__details facilities__chat hidden">
-            <div class="facilities__content">
-              <h3 class="facilities__title">Коммуникатор</h3>
-              <p>Сервис для  совместной интерактивной работы с подрядчиками при решении какой-либо задачи, позволяющий совместно использовать и/или обмениваться любыми типами информации (фото, видео, чертежи, инструкции, паспорта и т. п.), организовывать групповое общение, структурировать общение по темам и сохранять историю такого общения.</p>
+            <!-- Коммутатор -->
+            <div class="facilities__details tab-6">
+              <div class="facilities__content">
+                <h3 class="facilities__title">Коммуникатор</h3>
+                <p>Сервис для  совместной интерактивной работы с подрядчиками при решении какой-либо задачи, позволяющий совместно использовать и/или обмениваться любыми типами информации (фото, видео, чертежи, инструкции, паспорта и т. п.), организовывать групповое общение, структурировать общение по темам и сохранять историю такого общения.</p>
+              </div>
+              <img class="facilities__image" src="./img/dashboard-image-chat-min.png" alt="facilities-chat">
             </div>
-            <img class="facilities__image" src="./img/dashboard-image-chat-min.png" alt="facilities-chat">
           </div>
         </div>
-        <!-- facilities__block end -->
+          <!-- facilities__block end -->
 
-        <!-- services__block -->
-        <div id="services" class="block services__block">
-          <h2>Дополнительные сервисы</h2>
-          <ul class="services__list">
-            <li class="services__item">
-              <img class="services__image" src="./img/svg/services-hr.svg" alt="services-hr">
-              <div class="services__content">
-                <p class="services__title">HR</p>
-                <p class="services__description">Сервис, предназначенный для поиска работы в интересующих отраслях, а также для получения дополнительного образования и повышения квалификации.</p>
-              </div>
-            </li>
-            <li class="services__item">
-              <img class="services__image" src="./img/svg/services-billboard.svg" alt="services-billboard">
-              <div class="services__content">
-                <p class="services__title">Доска объявлений</p>
-                <p class="services__description">Сервис для решения задач покупки или продажи необходимых товаров и услуг.</p>
-              </div>
-            </li>
-            <li class="services__item">
-              <img class="services__image" src="./img/svg/services-media.svg" alt="services-media">
-              <div class="services__content">
-                <p class="services__title">Медиа</p>
-                <p class="services__description">Сервис для получения актуальной новостной и иной профессиональной информации, в том числе о различных мероприятиях и событиях: выставках, конференциях и т.п.</p>
-              </div>
-            </li>
-          </ul>
+          <!-- services__block -->
+          <div id="services" class="block services__block">
+            <h2>Дополнительные сервисы</h2>
+            <ul class="services__list">
+              <li class="services__item">
+                <img class="services__image" src="./img/svg/services-hr.svg" alt="services-hr">
+                <div class="services__content">
+                  <p class="services__title">HR</p>
+                  <p class="services__description">Сервис, предназначенный для поиска работы в интересующих отраслях, а также для получения дополнительного образования и повышения квалификации.</p>
+                </div>
+              </li>
+              <li class="services__item">
+                <img class="services__image" src="./img/svg/services-billboard.svg" alt="services-billboard">
+                <div class="services__content">
+                  <p class="services__title">Доска объявлений</p>
+                  <p class="services__description">Сервис для решения задач покупки или продажи необходимых товаров и услуг.</p>
+                </div>
+              </li>
+              <li class="services__item">
+                <img class="services__image" src="./img/svg/services-media.svg" alt="services-media">
+                <div class="services__content">
+                  <p class="services__title">Медиа</p>
+                  <p class="services__description">Сервис для получения актуальной новостной и иной профессиональной информации, в том числе о различных мероприятиях и событиях: выставках, конференциях и т.п.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
         <!-- services__block end -->
 
@@ -295,12 +284,12 @@
         <div id="costs" class="block costs__block">
           <h2>Подберите подходящий тариф</h2>
           <ul class="costs__tabs menu__list">
-            <li class="block__item"><a href="#">Организациям</a></p>
-            <li class="block__item active"><a href="#">Частным лицам</a></p>
+            <li class="block__item" data-block="tab-1">Организациям</p>
+            <li class="block__item active" data-block="tab-2">Частным лицам</p>
           </ul>
 
           <div class="costs__tariffs">
-            <div class="costs__card active">
+            <div class="costs__card active tab-2">
               <p class="costs__category">Бесплатный</p>
               <p class="costs__price">0₽</p>
               <p class="costs__note">начните сейчас</p>
@@ -312,7 +301,7 @@
                 <li>1 пользователь</li>
               </ul>
             </div>
-            <div class="costs__card">
+            <div class="costs__card tab-1">
               <p class="costs__category">Частный</p>
               <p class="costs__price">1 000₽<span>/ год</span></p>
               <p class="costs__note">3 месяца бесплатно</p>
@@ -340,16 +329,12 @@
             <img src="./img/svg/contacts-image.svg" alt="contacts-image">
             <div class="invitation__details">
               <ul class="invitation__tabs menu__list">
-                <li class="block__item">
-                  <a href="#">Юридическим лицам</a>
-                </li>
-                <li class="block__item active">
-                  <a href="#">Частным лицам</a>
-                </li>
+                <li class="block__item" data-block="tab-1">Юридическим лицам</li>
+                <li class="block__item active" data-block="tab-2">Частным лицам</li>
               </ul>
 
               <!-- Частным лицам -->
-              <form class="invitation__form invitation__private">
+              <form class="invitation__form tab-2 active" method="POST">
                 <div class="form__wrapper">
                   <label>
                     <input name="name" placeholder="Имя Фамилия*" required>
@@ -387,7 +372,7 @@
               </form>
 
               <!-- Юридическим лицам -->
-              <form class="invitation__form invitation__legal hidden">
+              <form class="invitation__form tab-1" method="POST">
                 <div class="form__wrapper">
                   <label>
                     <input name="name" placeholder="Имя Фамилия*" required>
@@ -418,39 +403,49 @@
         </div>
         <!-- invitation__block end -->
 
-        <!-- popup -->
-        <div class="popup popup__facilities hidden"> <!-- 1254 784 -->
-          <div class="popup__content facilities__profile">
+        <!-- popups -->
+        <div class="popup popup__facilities facilities__profile hidden">
+          <div class="popup__content">
             <img class="popup__image" src="./img/dashboard-image-profile-min.png">
-            <img class="popup__exit" src="./img/svg/exit.svg">
-          </div>
-
-          <div class="popup__content facilities__equipment hidden">
-            <img class="popup__image" src="./img/dashboard-image-equipment-min.png">
-            <img class="popup__exit" src="./img/svg/exit.svg">
-          </div>
-
-          <div class="popup__content facilities__planner hidden">
-            <img class="popup__image" src="./img/dashboard-image-planner-min.png">
-            <img class="popup__exit" src="./img/svg/exit.svg">
-          </div>
-
-          <div class="popup__content facilities__errors hidden">
-            <img class="popup__image" src="./img/dashboard-image-errors-min.png">
-            <img class="popup__exit" src="./img/svg/exit.svg">
-          </div>
-
-          <div class="popup__content facilities__partners hidden">
-            <img class="popup__image" src="./img/dashboard-image-partners-min.png">
-            <img class="popup__exit" src="./img/svg/exit.svg">
-          </div>
-
-          <div class="popup__content facilities__chat hidden">
-            <img class="popup__image" src="./img/dashboard-image-chat-min.png">
-            <img class="popup__exit" src="./img/svg/exit.svg">
+            <img class="popup__close" src="./img/svg/exit.svg">
           </div>
         </div>
-        <!-- popup end -->
+
+        <div class="popup popup__facilities facilities__equipment hidden">
+          <div class="popup__content">
+            <img class="popup__image" src="./img/dashboard-image-equipment-min.png">
+            <img class="popup__close" src="./img/svg/exit.svg">
+          </div>
+        </div>
+
+        <div class="popup popup__facilities facilities__planner hidden">
+          <div class="popup__content">
+            <img class="popup__image" src="./img/dashboard-image-planner-min.png">
+            <img class="popup__close" src="./img/svg/exit.svg">
+          </div>
+        </div>
+
+        <div class="popup popup__facilities facilities__errors hidden">
+          <div class="popup__content">
+            <img class="popup__image" src="./img/dashboard-image-errors-min.png">
+            <img class="popup__close" src="./img/svg/exit.svg">
+          </div>
+        </div>
+
+        <div class="popup popup__facilities facilities__partners hidden">
+          <div class="popup__content">
+            <img class="popup__image" src="./img/dashboard-image-partners-min.png">
+            <img class="popup__close" src="./img/svg/exit.svg">
+          </div>
+        </div>
+
+        <div class="popup popup__facilities facilities__chat hidden">
+          <div class="popup__content">
+            <img class="popup__image" src="./img/dashboard-image-chat-min.png">
+            <img class="popup__close" src="./img/svg/exit.svg">
+          </div>
+        </div>
+        <!-- popups end -->
 
       </main>
       <!-- main content end -->

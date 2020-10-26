@@ -34,9 +34,8 @@
 });
 */
 
-// Smooth scroll to anchors
+// smooth scroll to anchors
 (function () {
-
     const smoothScroll = function (targetEl, duration) {
         const headerElHeight =  document.querySelector('.header').clientHeight;
         let target = document.querySelector(targetEl);
@@ -73,4 +72,54 @@
     scrollTo();
 }());
 
-// babeljs.io - minify / minifier
+// change philosophy__tabs
+let tab = function(tabNavigation, tabContent) {
+    let tabNav = document.querySelectorAll(tabNavigation);
+    let tabDetails = document.querySelectorAll(tabContent);
+    let tabName;
+
+    tabNav.forEach(item => {
+        item.addEventListener('click', selectTabNav);
+    });
+
+    function selectTabNav() {
+        tabNav.forEach(item => {
+            item.classList.remove('active');
+        });
+        this.classList.add('active');
+        tabName = this.getAttribute('data-block');
+        selectTabContent(tabName);
+    };
+
+    function selectTabContent(tabName) {
+        tabDetails.forEach(item => {
+            item.classList.contains(tabName) ? item.classList.add('active') : item.classList.remove('active');
+        });
+    };
+};
+
+// change philosophy__tabs
+tab('.philosophy__tabs .block__item', '.philosophy__details');
+
+// change facilities__tabs
+tab('.facilities__tabs .block__item', '.facilities__details');
+
+// change costs__tabs
+tab('.costs__tabs .block__item', '.costs__card');
+
+// change invitation__tabs
+tab('.invitation__tabs .block__item', '.invitation__form');
+
+// open popups
+const popups = document.querySelectorAll('.popup');
+const images = document.querySelectorAll('.facilities__image');
+const close = document.querySelectorAll('.popup__close');
+
+for (let i = 0; i < images.length; i += 1) {
+    images[i].addEventListener('click', () => {
+        popups[i].classList.remove('hidden');
+        close[i].addEventListener('click', () => {
+            popups[i].classList.add('hidden');
+        });
+    });
+};

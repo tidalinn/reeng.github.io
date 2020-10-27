@@ -62,11 +62,11 @@
       <main class="main">
 
         <!-- top__block -->
-        <div id="about" class="block top__block">
+        <div id="about" class="block block__scroll top__block">
           <div class="top__content">
             <h1>Единая Информационная Платформа «REENG»</h1>
             <p class="top__slogan">Создание и развитие новой культуры эксплуатации оборудования</p>
-            <button class="button">Получить приглашение</button>
+            <button class="button button__legal">Получить приглашение</button>
             <p class="top__info">Для получения приглашения Заполните заявку и получите доступ к закрытому бета-тестированию.</p>
           </div>
           <img class="top__image" src="./img/desktop-image-min.png" alt="Reeng desktop image">
@@ -120,7 +120,7 @@
         <!-- philosophy__block end -->
 
         <!-- usability__block -->
-        <div id="customer" class="block usability__block">
+        <div id="customer" class="block block__scroll usability__block">
           <h2>Кому полезен REENG</h2>
           <ul class="usability__list">
             <li class="usability__item">
@@ -128,39 +128,39 @@
               <div class="usability__content">
                 <p class="usability__title private">Частные лица и домовладельцы</p>
                 <p class="usability__description">Физические лица, эксплуатирующие какое-либо оборудование в своих домохозяйствах.</p>
-                <button class="button private hidden">Подробнее</button>
+                <button class="button private">Подробнее</button>
               </div>
             </li>
             <li class="usability__item">
               <img src="./img/svg/usability-manufacturing.svg" alt="usability-manufacturing">
-              <div class="usability__content"">
+              <div class="usability__content">
                 <p class="usability__title manufacturing">Владельцы оборудования</p>
                 <p class="usability__description">Компании, эксплуатирующие какое-либо оборудование, вне зависимости от размера и отрасли деятельности.</p>
-                <button class="button manufacturing hidden">Подробнее</button>
+                <button class="button manufacturing">Подробнее</button>
               </div>
             </li>
-            <li class="usability__item active">
+            <li class="usability__item">
               <img src="./img/svg/usability-services.svg" alt="usability-services">
-              <div class="usability__content"">
+              <div class="usability__content">
                 <p class="usability__title services">Сервисные и монтажные компании</p>
                 <p class="usability__description">Компании, осуществляющие монтаж и обслуживание оборудования.</p>
-                <button class="button services hidden">Подробнее</button>
+                <button class="button services">Подробнее</button>
               </div>
             </li>
             <li class="usability__item">
               <img src="./img/svg/usability-equipment.svg" alt="usability-equipment">
-              <div class="usability__content"">
+              <div class="usability__content">
                 <p class="usability__title equipment">Производители оборудования</p>
                 <p class="usability__description">Компании - производители оборудования.</p>
-                <button class="button equipment hidden">Подробнее</button>
+                <button class="button equipment">Подробнее</button>
               </div>
             </li>
             <li class="usability__item">
               <img src="./img/svg/usability-suppliers.svg" alt="usability-suppliers">
-              <div class="usability__content"">
+              <div class="usability__content">
                 <p class="usability__title suppliers">Поставщики товаров и услуг</p>
                 <p class="usability__description">Компании и физические лица, занимающиеся поставкой любых товаров и услуг.</p>
-                <button class="button suppliers hidden">Подробнее</button>
+                <button class="button suppliers">Подробнее</button>
               </div>
             </li>
           </div>
@@ -168,7 +168,7 @@
         <!-- usability__block end -->
 
         <!-- facilities__block -->
-        <div id="facilities" class="block facilities__block">
+        <div id="facilities" class="block block__scroll facilities__block">
           <h2>Возможности платформы</h2>
           <p class="subheader">Примеры основных сервисов Платформы</p>
           <ul class="facilities__tabs menu__list">
@@ -189,7 +189,10 @@
                 <p>Информация в личных кабинетах каждой группы пользователей отличается в соответствии с выполняемыми функциями, требуемой статистической информацией, различиями в наборе текущих задач.</p>
               </div>
               <div class="facilities__slider">
-                <img class="facilities__image" src="./img/dashboard-image-profile-min.png" alt="facilities-profile">
+                <div class="facilities__slides">
+                  <img class="facilities__image active" src="./img/dashboard-image-profile-min.png" alt="facilities-profile">
+                  <img class="facilities__image" src="./img/dashboard-image-profile2-min.png" alt="facilities-profile">
+                </div>
                 <div class="facilities__navigation">
                   <img class="arrow arrow__left" src="./img/svg/arrow-left.svg" alt="arrow-left">
                   <img class="arrow arrow__right" src="./img/svg/arrow-right.svg" alt="arrow-right">
@@ -280,7 +283,7 @@
         <!-- services__block end -->
 
         <!-- costs__block -->
-        <div id="costs" class="block costs__block">
+        <div id="costs" class="block block__scroll costs__block">
           <h2>Подберите подходящий тариф</h2>
           <ul class="costs__tabs menu__list">
             <li class="block__item" data-block="tab-1">Организациям</p>
@@ -288,33 +291,65 @@
           </ul>
 
           <div class="costs__tariffs">
-            <div class="costs__card active tab-2">
-              <p class="costs__category">Бесплатный</p>
-              <p class="costs__price">0₽</p>
-              <p class="costs__note">начните сейчас</p>
-              <button class="button">Получить доступ</button>
-              <ul class="costs__advantages">
-                <li>наличие рекламы</li>
-                <li class="active">5 Гб файловое хранилище</li>
-                <li>ограничение по количеству введенной информации</li>
-                <li>1 пользователь</li>
-              </ul>
+
+            <!-- Частным лицам -->
+            <div class="costs__cards active tab-2">
+              <div class="costs__card active">
+                <p class="costs__category">Бесплатный</p>
+                <p class="costs__price">0₽</p>
+                <p class="costs__note">начните сейчас</p>
+                <button class="button button__private">Получить доступ</button>
+                <ul class="costs__advantages">
+                  <li>наличие рекламы</li>
+                  <li class="active">5 Гб файловое хранилище</li>
+                  <li>ограничение по количеству введенной информации</li>
+                  <li>1 пользователь</li>
+                </ul>
+              </div>
+              <div class="costs__card">
+                <p class="costs__category">Частный</p>
+                <p class="costs__price">1 000₽<span>/ год</span></p>
+                <p class="costs__note">3 месяца бесплатно</p>
+                <button class="button button__private">Получить доступ</button>
+                <ul class="costs__advantages">
+                  <li>отсутствие рекламы на страницах основных сервисов Платформы</li>
+                  <li class="active">10 Гб файловое хранилище</li>
+                  <li>ограничение по количеству введенной информации</li>
+                  <li>1 пользователь</li>
+                </ul>
+              </div>
             </div>
-            <div class="costs__card tab-1">
-              <p class="costs__category">Частный</p>
-              <p class="costs__price">1 000₽<span>/ год</span></p>
-              <p class="costs__note">3 месяца бесплатно</p>
-              <button class="button">Получить доступ</button>
-              <ul class="costs__advantages">
-                <li>отсутствие рекламы на страницах основных сервисов Платформы</li>
-                <li class="active">10 Гб файловое хранилище</li>
-                <li>ограничение по количеству введенной информации</li>
-                <li>1 пользователь</li>
-              </ul>
+
+            <!-- Организациям -->
+            <div class="costs__cards tab-1">
+              <div class="costs__card">
+                <p class="costs__category">Бизнес</p>
+                <p class="costs__price">12 000₽<span>/ год</span></p>
+                <p class="costs__note">3 месяца бесплатно</p>
+                <button class="button button__legal">Получить доступ</button>
+                <ul class="costs__advantages">
+                  <li>отсутствие рекламы на страницах основных сервисов Платформы</li>
+                  <li class="active">100 Гб файловое хранилище</li>
+                  <li>без ограничений по количеству введенной информации</li>
+                  <li>без ограничения по количеству пользователей от 1 компании</li>
+                </ul>
+              </div>
+              <div class="costs__card">
+                <p class="costs__category center">«Сетевой»</p>
+                <p class="costs__request">цена по запросу</p>
+                <button class="button button__legal">Получить консультацию</button>
+                <p class="costs__text">Данный тариф подходит для организаций, имеющих сетевую структуру (более 5 территориально распределенных объектов).</p>
+              </div>
+              <div class="costs__card">
+                <p class="costs__category center">«Индивидуальный»</p>
+                <p class="costs__request">цена по запросу</p>
+                <button class="button button__legal">Получить консультацию</button>
+                <p class="costs__text">Данный тариф подходит для крупных локально расположенных предприятий.</p>
+              </div>
             </div>
           </div>
 
-          <button id="call-popup" class="button costs__button">Оставить заявку</button>
+          <button id="call-popup" class="button costs__button button__legal">Оставить заявку</button>
           <p class="costs__info">Оставьте заявку, и наши специалисты свяжутся с вами в ближайшее время.</p>
         </div>
         <!-- costs__block end -->
@@ -363,7 +398,7 @@
                   <div class="form__checkpolicy">
                     <label class="form__checkbox">
                       <input id="checkbox" name="checkbox" type="checkbox" checked>
-                      <span>Принимаю условия <a class="form__link" href="policy.html">политики конфиденциальности</a></span>
+                      <span>Принимаю условия <a class="form__link" href="./policy.html">политики конфиденциальности</a></span>
                     </label>
                   </div>
                 </div>
@@ -391,7 +426,7 @@
                   <div class="form__checkpolicy">
                     <label class="form__checkbox">
                       <input id="checkbox" name="checkbox" type="checkbox" checked>
-                      <span>Принимаю условия <a class="form__link" href="#">политики конфиденциальности</a></span>
+                      <span>Принимаю условия <a class="form__link" href="./policy.html">политики конфиденциальности</a></span>
                     </label>
                   </div>
                 </div>
@@ -402,7 +437,7 @@
         </div>
         <!-- invitation__block end -->
 
-        <!-- popups -->
+        <!-- popup__facilities -->
         <div class="popup popup__facilities facilities__profile hidden">
           <div class="popup__content">
             <img class="popup__image" src="./img/dashboard-image-profile-min.png">
@@ -444,7 +479,98 @@
             <img class="popup__close" src="./img/svg/exit.svg">
           </div>
         </div>
-        <!-- popups end -->
+        <!-- popup__facilities end -->
+
+        <!-- popup__request -->
+
+        <!-- Юридическим лицам -->
+        <div class="popup popup__request popup__legal hidden">
+          <div class="popup__content">
+            <h4>Оставьте заявку, и в ближайшее время мы вышлем вам приглашение</h4>
+            <form class="popup__form" method="POST">
+              <div class="form__wrapper">
+                <label>
+                  <input name="name" placeholder="Имя Фамилия*" required>
+                </label>
+                <label>
+                  <input name="phone" placeholder="Номер телефона*" required>
+                </label>
+                <label>
+                  <input name="email" placeholder="Электронная почта*" required>
+                </label>
+                <label>
+                  <input name="field" placeholder="Род деятельности компании*" required>
+                </label>
+                <label>
+                  <input name="title" placeholder="Должность*" required>
+                </label>
+                <div class="form__checkpolicy">
+                  <label class="form__checkbox">
+                    <input id="checkbox" name="checkbox" type="checkbox" checked>
+                    <span>Принимаю условия <a class="form__link" href="./policy.html">политики конфиденциальности</a></span>
+                  </label>
+                </div>
+              </div>
+              <button class="button form__button" type="submit">Отправить заявку</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Частным лицам -->
+        <div class="popup popup__request popup__private hidden">
+          <div class="popup__content">
+            <h4>Оставьте заявку, и наши специалисты свяжутся с вами в ближайшее время.</h4>
+            <form class="popup__form" method="POST">
+              <div class="form__wrapper">
+                <label>
+                  <input name="name" placeholder="Имя Фамилия*" required>
+                </label>
+                <label>
+                  <input name="phone" placeholder="Номер телефона*" required>
+                </label>
+                <label>
+                  <input name="email" placeholder="Электронная почта*" required>
+                </label>
+                <label>
+                  <textarea class="textarea" name="textarea" placeholder="Дополнительная информация"></textarea>
+                </label>
+                <div class="form__checkpolicy">
+                  <label class="form__checkbox">
+                    <input id="checkbox" name="checkbox" type="checkbox" checked>
+                    <span>Принимаю условия <a class="form__link" href="./policy.html">политики конфиденциальности</a></span>
+                  </label>
+                </div>
+              </div>
+              <button class="button form__button" type="submit">Отправить заявку</button>
+            </form>
+          </div>
+        </div>
+        <!-- popup__request end -->
+
+        <!-- background -->
+        <div class="background__images">
+          <div class="background__left background__block">
+            <img src="./img/svg/bg-mech-left-01.svg">
+            <img src="./img/svg/bg-mech-left-02.svg">
+            <img src="./img/svg/bg-mech-left-01.svg">
+            <img src="./img/svg/bg-mech-left-02.svg">
+            <img src="./img/svg/bg-mech-left-01.svg">
+            <img src="./img/svg/bg-mech-left-02.svg">
+            <img src="./img/svg/bg-mech-left-01.svg">
+          </div> 
+          <div class="background__right background__block">
+            <img src="./img/svg/bg-mech-right-01.svg">
+            <img src="./img/svg/bg-mech-right-02.svg">
+            <img src="./img/svg/bg-mech-right-03.svg">
+            <img src="./img/svg/bg-mech-right-04.svg">
+            <img src="./img/svg/bg-mech-right-05.svg">
+            <img src="./img/svg/bg-mech-right-06.svg">
+            <img src="./img/svg/bg-mech-right-07.svg">
+            <img src="./img/svg/bg-mech-right-07.svg">
+            <img src="./img/svg/bg-mech-right-08.svg">
+          </div>
+        </div>
+        <!-- background end -->
 
       </main>
       <!-- main content end -->
@@ -476,7 +602,9 @@
       </div>
       <div class="footer__links">
         <div class="footer__copyright">
-          <p class="footer__politics"><a class="footer__link" href="policy.html">Политика конфиденциальности</a></p>
+          <p class="footer__politics">
+            <a class="footer__link" href="./policy.html">Политика конфиденциальности</a>
+          </p>
           <p class="footer__info">© 2020 reeng</p> 
         </div>
         <ul class="footer__socials">

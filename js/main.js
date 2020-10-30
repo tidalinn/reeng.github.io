@@ -9,30 +9,27 @@
     }
 }());
 
-/*
 // Burger menu handler
 (function () {
-    const burgerItem = document.querySelector('burger');
-    const menu = document.querySelector('header__nav');
-    const menuCloseItem = document.querySelector('header__nav-close');
-    const menuLinks = document.querySelectorAll('header__links');
+    const burger = document.querySelector('.burger');
+    const burgerOpen = document.querySelector('.burger__icon');
+    const burgerClose = document.querySelector('.burger__close');
+    const burgerLinks = document.querySelectorAll('.burger__item');
 
-    burgerItem.addEventListener('click', () => {
-        menu.classList.add.apply('header__nav_active');
+    burgerOpen.addEventListener('click', () => {
+        burger.classList.remove('hidden');
     })
-    menuCloseItem.addEventListener('click', () => {
-        menu.classList.remove('header__nav_active');
+    burgerClose.addEventListener('click', () => {
+        burger.classList.add('hidden');
     });
 
-    if (window.innerWidth < 768) {
-        for (let i = 0; i < menuLinks.length; i += 1) {
-            menuLinks[i].addEventListener('click', () => {
-                menu.classList.remove('header__nav_active');
-            });
-        };
+    // if (window.innerWidth < 768) {
+    for (let i = 0; i < burgerLinks.length; i += 1) {
+        burgerLinks[i].addEventListener('click', () => {
+            burger.classList.add('hidden');
+        });
     };
-});
-*/
+}());
 
 // active menu on scroll
 window.addEventListener('scroll', () => {
@@ -132,16 +129,22 @@ tab('.invitation__tabs .block__item', '.invitation__form');
 // open popup__facilities
 const popups = document.querySelectorAll('.popup');
 const images = document.querySelectorAll('.facilities__image');
+const zoom = document.querySelectorAll('.facilities__zoom');
 const close = document.querySelectorAll('.popup__close');
 
+function openFacilitiesImage(array, index) {
+    array.addEventListener('click', () => {
+        popups[index].classList.remove('hidden');
+        close[index].addEventListener('click', () => {
+            popups[index].classList.add('hidden');
+        })
+    })
+}
+
 for (let i = 0; i < images.length; i += 1) {
-    images[i].addEventListener('click', () => {
-        popups[i].classList.remove('hidden');
-        close[i].addEventListener('click', () => {
-            popups[i].classList.add('hidden');
-        });
-    });
-};
+    openFacilitiesImage(images[i], i);
+    openFacilitiesImage(zoom[i], i);
+}
 
 // open popup__request
 const buttonLegal = document.querySelectorAll('.button__legal');
@@ -165,21 +168,6 @@ function popupShow(button, popup) {
 
 popupShow(buttonLegal, popupLegal);
 popupShow(buttonPrivate, popupPrivate);
-
-// slider
-const slider = document.querySelector('.facilities__slider');
-const slides = document.querySelectorAll('.facilities__slides .facilities__image');
-const arrowPrevious = document.querySelector('.arrow__left');
-const arrowNext = document.querySelector('.arrow__right');
-let count = 0;
-
-for (let i = 0; i < slides.length; i += 1) {
-    function next() {
-        arrowNext.addEventListener('click', () => {
-            slides[count].classList.remove('active');
-        })
-    }
-}
 
 // show usability__block buttons on hover
 

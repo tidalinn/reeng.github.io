@@ -14,9 +14,8 @@
 
       <!-- header -->
       <header class="header">
-        <a class="header__logo">
-          <img src="./img/svg/logo-header.svg" alt="Reeng-logo">
-        </a>
+        <img class="header__logo" src="./img/svg/logo-header.svg" alt="Reeng-logo">
+        <img class="header__logo--mobile" src="./img/svg/logo-header-mobile.svg" alt="Reeng-logo">
         <nav class="header__menu">
           <ul class="header__list menu__list">
             <li class="header__item active">
@@ -33,28 +32,83 @@
             </li>
           </ul>
         </nav>
-          <ul class="header__socials">
-            <li class="header__item">
-              <a href="#">
-                <img src="./img/svg/socials-vk-dark.svg" alt="vkontakte">
-              </a>
-            </li>
-            <li class="header__item">
-              <a href="#">
-                <img src="./img/svg/socials-fb-dark.svg" alt="facebook">
-              </a>
-            </li>
-            <li class="header__item">
-              <a href="#">
-                <img src="./img/svg/socials-ok-dark.svg" alt="odnoklassniki">
-              </a>
-            </li>
-            <li class="header__item">
-              <a href="#">
-                <img src="./img/svg/socials-inst-dark.svg" alt="instagram">
-              </a>
-            </li>
-          </ul>
+        <img class="burger__icon" src="/img/svg/burger-menu.svg">
+        <ul class="header__socials">
+          <li class="header__item">
+            <a href="#">
+              <img src="./img/svg/socials-vk-dark.svg" alt="vkontakte">
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#">
+              <img src="./img/svg/socials-fb-dark.svg" alt="facebook">
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#">
+              <img src="./img/svg/socials-ok-dark.svg" alt="odnoklassniki">
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#">
+              <img src="./img/svg/socials-inst-dark.svg" alt="instagram">
+            </a>
+          </li>
+        </ul>
+
+        <!-- header burger -->
+        <div class="burger hidden">
+          <div class="burger__content">
+            <nav class="burger__menu">
+              <img class="burger__logo" src="./img/svg/logo-footer.svg" alt="Reeng-logo">
+              <ul class="burger__list">
+                <li class="burger__item active">
+                  <a class="js-scroll" href="#about">О платформе</a>
+                </li>
+                <li class="burger__item">
+                  <a class="js-scroll" href="#customer">Для кого</a>
+                </li>
+                <li class="burger__item">
+                  <a class="js-scroll" href="#facilities">Возможности</a>
+                </li>
+                <li class="burger__item">
+                  <a class="js-scroll" href="#costs">Тарифы</a>
+                </li>
+              </ul>
+            </nav>
+            <img class="burger__close" src="./img/svg/burger-menu-light.svg">
+            <ul class="burger__socials">
+              <li class="burger__item">
+                <a href="#">
+                  <img src="./img/svg/socials-vk.svg" alt="vkontakte">
+                </a>
+              </li>
+              <li class="burger__item">
+                <a href="#">
+                  <img src="./img/svg/socials-fb.svg" alt="facebook">
+                </a>
+              </li>
+              <li class="burger__item">
+                <a href="#">
+                  <img src="./img/svg/socials-ok.svg" alt="odnoklassniki">
+                </a>
+              </li>
+              <li class="burger__item">
+                <a href="#">
+                  <img src="./img/svg/socials-inst.svg" alt="instagram">
+                </a>
+              </li>
+            </ul>
+            <div class="burger__copyright">
+              <p class="burger__politics">
+                <a class="burger__link" href="./privacy.html">Политика конфиденциальности</a>
+              </p>
+              <p class="burger__info">© 2020 reeng</p> 
+            </div>
+          </div>
+        </div>
+        <!-- header burger end -->
+        
       </header>
       <!-- header end -->
 
@@ -68,8 +122,31 @@
             <p class="top__slogan">Создание и развитие новой культуры эксплуатации оборудования</p>
             <button class="button button__legal">Получить приглашение</button>
             <p class="top__info">Для получения приглашения Заполните заявку и получите доступ к закрытому бета-тестированию.</p>
+            <ul class="header__socials top__socials">
+              <li class="header__item">
+                <a href="#">
+                  <img src="./img/svg/socials-vk-dark.svg" alt="vkontakte">
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="#">
+                  <img src="./img/svg/socials-fb-dark.svg" alt="facebook">
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="#">
+                  <img src="./img/svg/socials-ok-dark.svg" alt="odnoklassniki">
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="#">
+                  <img src="./img/svg/socials-inst-dark.svg" alt="instagram">
+                </a>
+              </li>
+            </ul>
           </div>
-          <img class="top__image" src="./img/desktop-image-min.png" alt="Reeng desktop image">
+          <img class="top__image--desktop" src="./img/desktop-image-min.png" alt="Reeng desktop image">
+          <img class="top__image--mobile" src="./img/desktop-image-mobile-min.png" alt="Reeng desktop image">
         </div>
         <!-- top__block end -->
 
@@ -190,8 +267,14 @@
               </div>
               <div class="facilities__slider">
                 <div class="facilities__slides">
-                  <img class="facilities__image active" src="./img/dashboard-image-profile-min.png" alt="facilities-profile">
-                  <img class="facilities__image" src="./img/dashboard-image-profile2-min.png" alt="facilities-profile">
+                  <div class="facilities__slide">
+                    <img class="facilities__image" src="./img/dashboard-image-profile-min.png" alt="facilities-profile">
+                    <img class="facilities__zoom" src="img/svg/loupe.svg">
+                  </div>
+                  <div class="facilities__slide hidden">
+                    <img class="facilities__image" src="./img/dashboard-image-profile2-min.png" alt="facilities-profile">
+                    <img class="facilities__zoom" src="img/svg/loupe.svg">
+                  </div>
                 </div>
                 <div class="facilities__navigation">
                   <img class="arrow arrow__left" src="./img/svg/arrow-left.svg" alt="arrow-left">
@@ -207,6 +290,7 @@
                 <p>Сервис, предоставляющий все инструменты для учёта и обслуживания как  различного оборудования, так и многих других активов личного хозяйства: планирования, и контроля любых необходимых работ, в т.ч.  по техническому обслуживанию и ремонту; хранения и оперативного использования документации; организации работы по устранению неисправностей (рекламации и заявки) и многому другому.</p>
               </div>
               <img class="facilities__image" src="./img/dashboard-image-equipment-min.png" alt="facilities-equipment">
+              <img class="facilities__zoom" src="img/svg/loupe.svg">
             </div>
 
             <!-- Планировщик задач -->
@@ -216,6 +300,7 @@
                 <p>Предназначен для планирования (в том числе совместно с другими участниками процесса), контроля и анализа исполнения любых задач, которые могут возникнуть в процессе эксплуатации: технического обслуживания, ремонта, прочих. Предоставляет возможность текущих комментариев участников по ходу выполнения работ.</p>
               </div>
               <img class="facilities__image" src="./img/dashboard-image-planner-min.png" alt="facilities-planner">
+              <img class="facilities__zoom" src="img/svg/loupe.svg">
             </div>
 
             <!-- Неисправности -->
@@ -229,6 +314,7 @@
                 <p>Собирать и анализировать статистику по выполняемым работам, по неисправностям, по исполнителям. Планировать загрузку сотрудников.</p>
               </div>
               <img class="facilities__image" src="./img/dashboard-image-errors-min.png" alt="facilities-errors">
+              <img class="facilities__zoom" src="img/svg/loupe.svg">
             </div>
 
             <!-- Сервис и ремонт -->
@@ -238,6 +324,7 @@
                 <p>Сервис, обеспечивающий возможность быстрого поиска и проверки потенциального подрядчика для решения поставленной  задачи, а также организации быстрой связи с ним.</p>
               </div>
               <img class="facilities__image" src="./img/dashboard-image-partners-min.png" alt="facilities-partners">
+              <img class="facilities__zoom" src="img/svg/loupe.svg">
             </div>
 
             <!-- Коммутатор -->
@@ -247,6 +334,7 @@
                 <p>Сервис для  совместной интерактивной работы с подрядчиками при решении какой-либо задачи, позволяющий совместно использовать и/или обмениваться любыми типами информации (фото, видео, чертежи, инструкции, паспорта и т. п.), организовывать групповое общение, структурировать общение по темам и сохранять историю такого общения.</p>
               </div>
               <img class="facilities__image" src="./img/dashboard-image-chat-min.png" alt="facilities-chat">
+              <img class="facilities__zoom" src="img/svg/loupe.svg">
             </div>
           </div>
         </div>
@@ -356,11 +444,12 @@
 
         <!-- invitation__block -->
         <div class="block invitation__block">
+          <img class="invitation__image--mobile" src="./img/svg/contacts-image.svg" alt="contacts-image">
           <h2>Приглашаем принять участие в бета-тестировании</h2>
           <p class="subheader">Оставьте заявку, и наши специалисты свяжутся с вами в ближайшее время.</p>
           
           <div class="invitation__content">
-            <img src="./img/svg/contacts-image.svg" alt="contacts-image">
+            <img class="invitation__image--desktop" src="./img/svg/contacts-image.svg" alt="contacts-image">
             <div class="invitation__details">
               <ul class="invitation__tabs menu__list">
                 <li class="block__item" data-block="tab-1">Юридическим лицам</li>
@@ -398,7 +487,7 @@
                   <div class="form__checkpolicy">
                     <label class="form__checkbox">
                       <input id="checkbox" name="checkbox" type="checkbox" checked>
-                      <span>Принимаю условия <a class="form__link" href="./policy.html">политики конфиденциальности</a></span>
+                      <span>Принимаю условия <a class="form__link" href="./privacy.html">политики конфиденциальности</a></span>
                     </label>
                   </div>
                 </div>
@@ -426,7 +515,7 @@
                   <div class="form__checkpolicy">
                     <label class="form__checkbox">
                       <input id="checkbox" name="checkbox" type="checkbox" checked>
-                      <span>Принимаю условия <a class="form__link" href="./policy.html">политики конфиденциальности</a></span>
+                      <span>Принимаю условия <a class="form__link" href="./privacy.html">политики конфиденциальности</a></span>
                     </label>
                   </div>
                 </div>
@@ -439,45 +528,33 @@
 
         <!-- popup__facilities -->
         <div class="popup popup__facilities facilities__profile hidden">
-          <div class="popup__content">
-            <img class="popup__image" src="./img/dashboard-image-profile-min.png">
-            <img class="popup__close" src="./img/svg/exit.svg">
-          </div>
+          <img class="popup__image" src="./img/dashboard-image-profile-min.png">
+          <img class="popup__close" src="./img/svg/exit.svg">
         </div>
 
         <div class="popup popup__facilities facilities__equipment hidden">
-          <div class="popup__content">
-            <img class="popup__image" src="./img/dashboard-image-equipment-min.png">
-            <img class="popup__close" src="./img/svg/exit.svg">
-          </div>
+          <img class="popup__image" src="./img/dashboard-image-equipment-min.png">
+          <img class="popup__close" src="./img/svg/exit.svg">
         </div>
 
         <div class="popup popup__facilities facilities__planner hidden">
-          <div class="popup__content">
-            <img class="popup__image" src="./img/dashboard-image-planner-min.png">
-            <img class="popup__close" src="./img/svg/exit.svg">
-          </div>
+          <img class="popup__image" src="./img/dashboard-image-planner-min.png">
+          <img class="popup__close" src="./img/svg/exit.svg">
         </div>
 
         <div class="popup popup__facilities facilities__errors hidden">
-          <div class="popup__content">
-            <img class="popup__image" src="./img/dashboard-image-errors-min.png">
-            <img class="popup__close" src="./img/svg/exit.svg">
-          </div>
+          <img class="popup__image" src="./img/dashboard-image-errors-min.png">
+          <img class="popup__close" src="./img/svg/exit.svg">
         </div>
 
         <div class="popup popup__facilities facilities__partners hidden">
-          <div class="popup__content">
-            <img class="popup__image" src="./img/dashboard-image-partners-min.png">
-            <img class="popup__close" src="./img/svg/exit.svg">
-          </div>
+          <img class="popup__image" src="./img/dashboard-image-partners-min.png">
+          <img class="popup__close" src="./img/svg/exit.svg">
         </div>
 
         <div class="popup popup__facilities facilities__chat hidden">
-          <div class="popup__content">
-            <img class="popup__image" src="./img/dashboard-image-chat-min.png">
-            <img class="popup__close" src="./img/svg/exit.svg">
-          </div>
+          <img class="popup__image" src="./img/dashboard-image-chat-min.png">
+          <img class="popup__close" src="./img/svg/exit.svg">
         </div>
         <!-- popup__facilities end -->
 
@@ -487,6 +564,7 @@
         <div class="popup popup__request popup__legal hidden">
           <div class="popup__content">
             <h4>Оставьте заявку, и в ближайшее время мы вышлем вам приглашение</h4>
+            <img class="popup__close" src="./img/svg/exit.svg">
             <form class="popup__form" method="POST">
               <div class="form__wrapper">
                 <label>
@@ -507,7 +585,7 @@
                 <div class="form__checkpolicy">
                   <label class="form__checkbox">
                     <input id="checkbox" name="checkbox" type="checkbox" checked>
-                    <span>Принимаю условия <a class="form__link" href="./policy.html">политики конфиденциальности</a></span>
+                    <span>Принимаю условия <a class="form__link" href="./privacy.html">политики конфиденциальности</a></span>
                   </label>
                 </div>
               </div>
@@ -520,6 +598,7 @@
         <div class="popup popup__request popup__private hidden">
           <div class="popup__content">
             <h4>Оставьте заявку, и наши специалисты свяжутся с вами в ближайшее время.</h4>
+            <img class="popup__close" src="./img/svg/exit.svg">
             <form class="popup__form" method="POST">
               <div class="form__wrapper">
                 <label>
@@ -537,7 +616,7 @@
                 <div class="form__checkpolicy">
                   <label class="form__checkbox">
                     <input id="checkbox" name="checkbox" type="checkbox" checked>
-                    <span>Принимаю условия <a class="form__link" href="./policy.html">политики конфиденциальности</a></span>
+                    <span>Принимаю условия <a class="form__link" href="./privacy.html">политики конфиденциальности</a></span>
                   </label>
                 </div>
               </div>
@@ -603,7 +682,7 @@
       <div class="footer__links">
         <div class="footer__copyright">
           <p class="footer__politics">
-            <a class="footer__link" href="./policy.html">Политика конфиденциальности</a>
+            <a class="footer__link" href="./privacy.html">Политика конфиденциальности</a>
           </p>
           <p class="footer__info">© 2020 reeng</p> 
         </div>
